@@ -36,3 +36,14 @@ variable "allowed_oauth_scopes" {
   description = "List of allowed scopes for the application"
   type        = list(string)
 }
+
+# PetStore API
+variable "petstore-api-name" {
+  description = "Name of the PetStore API for identification and reference"
+  type        = string
+}
+
+variable "petstore-uri" {
+  description = "URI endpoint for the PetStore API services"
+  type        = string
+}
