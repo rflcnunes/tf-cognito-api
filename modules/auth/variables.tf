@@ -14,12 +14,6 @@ variable "mfa_status" {
   default     = "OFF"
 }
 
-variable "refresh_token_validity" {
-  description = "Refresh token validity period"
-  type        = number
-  default     = 30
-}
-
 variable "callback_urls" {
   description = "List of allowed callback URLs for the user pool client."
   type        = list(string)

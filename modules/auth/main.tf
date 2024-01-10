@@ -37,3 +37,8 @@ resource "aws_cognito_user_pool" "cognito_user_pool" {
     }
   }
 }
+
+resource "aws_cognito_user_pool_domain" "cognito_user_pool_domain" {
+  domain       = var.cognito_service_domain
+  user_pool_id = aws_cognito_user_pool.cognito_user_pool.id
+}
