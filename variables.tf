@@ -1,11 +1,38 @@
+# Provider
 variable "aws_region" {
   type        = string
-  description = ""
+  description = "AWS region where the resources will be deployed"
   default     = "us-east-1"
 }
 
 variable "aws_profile" {
   type        = string
-  description = ""
+  description = "AWS profile to be used for deployment"
   default     = "default"
+}
+
+# Cognito
+variable "cognito_service_name" {
+  type        = string
+  description = "Name of the Cognito service for identification"
+}
+
+variable "cognito_service_domain" {
+  type        = string
+  description = "Domain name for the Cognito service"
+}
+
+variable "callback_urls" {
+  description = "List of allowed callback URLs for the user pool client."
+  type        = list(string)
+}
+
+variable "logout_urls" {
+  description = "List of allowed logout URLs for the user pool client."
+  type        = list(string)
+}
+
+variable "allowed_oauth_scopes" {
+  description = "List of allowed scopes for the application"
+  type        = list(string)
 }
