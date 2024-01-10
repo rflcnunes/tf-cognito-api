@@ -37,6 +37,18 @@ variable "allowed_oauth_scopes" {
   type        = list(string)
 }
 
+# PetStore - Client
+variable "refresh_token_validity" {
+  description = "Refresh token validity period"
+  type        = number
+  default     = 30
+}
+
+variable "cognito_petstore_client_name" {
+  description = "Name of the Cognito service"
+  type        = string
+}
+
 # PetStore API
 variable "petstore-api-name" {
   description = "Name of the PetStore API for identification and reference"
